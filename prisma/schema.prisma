@@ -9,8 +9,10 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
 model Post {
   id        String  @id @default(uuid())
+  
   title     String  
   body      String
   createdAt DateTime  @default(now())
